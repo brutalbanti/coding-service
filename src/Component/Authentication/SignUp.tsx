@@ -67,7 +67,7 @@ export const SignUp = ({ handlerSign }: sign) => {
                         }
                         <button
                             onClick={handleSubmit}
-                            style={{ backgroundColor: "#EEBC1D", color: "white", width: '100%', height: "40px", fontWeight: '600', fontSize: "18px"  }}
+                            style={{ backgroundColor: "#EEBC1D", color: "white", width: '100%', height: "40px", fontWeight: '600', fontSize: "18px", cursor: "pointer"  }}
                         >
                             Sign In
                         </button>

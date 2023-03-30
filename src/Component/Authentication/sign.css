@@ -1,0 +1,50 @@
+.page__sign {
+    height: 100%;
+}
+
+.sign__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.sign__title {
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.sign__input {
+    border: 1px solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.sign__input::placeholder {
+    color: white;
+    font-weight: 500;
+}
+
+.err-message {
+    color: #e15e0c;
+    font-size: 14px;
+}
+
+.sign-change {
+    text-align: right;
+    color: #f3f3f3;
+
+}
+
+.sign-change button {
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+}

@@ -1,0 +1,330 @@
+.page__content {
+    padding: 40px 0;
+}
+
+.content__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .content__items {
+        justify-content: center
+    }
+}
+
+.content__video {
+    width: 400px;
+}
+
+.content__video-player {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.content__timer {
+    background: url('../../../source/home/violet.jpg');
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    background-size: cover;
+    position: relative;
+    padding: 40px;
+}
+
+
+.content-timer__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.timer-content__title {
+    color: white;
+    font-size: 28px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.content-timer__content {
+    padding: 35px 0 0 0;
+}
+
+.timer-content__time {
+    display: flex;
+    gap: 15px;
+}
+
+.time-content__item {
+    color: white;
+    font-size: 75px;
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+}
+
+.time-content__item:not(:last-child)::before {
+    content: ":";
+    position: absolute;
+    left: 88px;
+    top: -5px;
+}
+
+.timer-content__button {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.btn-timer {
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: violet;
+    font-size: 19px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-timer__reset {
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-timer__reset img {
+    width: 45px;
+}
+
+/* AUDIO PLAYER */
+
+.content__player {
+    background: rgb(56, 6, 123);
+    border-radius: 20px;
+    padding: 20px;
+    height: 400px;
+    width: 400px
+}
+
+@media (max-width: 650.98px) {
+    .content__video {
+        width: 100%;
+    }
+
+    .content__player {
+        width: 100%;
+    }
+
+    .content__timer {
+        width: 100%;
+    }
+}
+
+.sound-items__content {
+    height: 200px;
+    overflow: auto;
+}
+
+.sound-items__content::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.content__player::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.sound__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 2px solid rgb(142, 50, 212);
+    padding: 10px 0 10px 0;
+}
+
+.sound__item.select {
+    flex-direction: row;
+}
+
+.sound-item__sound {
+    --primary: #f40082;
+    --secondary: #ffd200;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.sound-information__name {
+    color: white;
+    font-weight: 600;
+}
+
+.sound-information__author {
+    color: rgba(255, 255, 255, 0.73);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.sound-item-now__title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.sound-item-now__name {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sound-item-now__author {
+    color: rgba(255, 255, 255, 0.73);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.playPause {
+    background: var(--primary);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.playPause.select {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.currentTime,
+.duration {
+    font-size: 16px;
+    color: white;
+}
+
+.repeat-btn {
+    cursor: pointer;
+}
+
+.progressBar {
+    --bar-bg: #e191ff96;
+    --seek-before-width: 0;
+    --seek-before-color: #fb2adf;
+    --knoby: #3452a5;
+    --selectedKnobby: #26c9c3;
+
+    appearance: none;
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+.progressBar::-webkit-slider-runnable-track {
+    appearance: none;
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+.progressBar::-moz-range-track {
+    appearance: none;
+    background: var(--bar-bg);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+.progressBar::-moz-focus-outer {
+    border: 0;
+
+}
+
+.progressBar::before {
+    content: '';
+    height: 11px;
+    width: var(--seek-before-width);
+    /* background-color: var(--seek-before-color); */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.progressBar::-moz-range-progress {
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 11px;
+}
+
+.progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 5px;
+    border: none;
+    background-color: var(--knoby);
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+.progressBar::active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+}
+
+.progressBar::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: var(--knoby);
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+.progressBar:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+}

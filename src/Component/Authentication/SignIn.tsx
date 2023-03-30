@@ -1,4 +1,3 @@
-import { Box, Button } from "@material-ui/core";
 import React, { useState } from 'react';
 import { auth } from '../../config/firebase';
 import './sign.css';
@@ -41,13 +40,12 @@ export const SignIn = ({ handlerSigns }: sign) => {
             <section className="page__sign">
                 <div className="sign__container">
                     <h1 className="sign__title">SIGN IN</h1>
-                    <Box
-                        p={3}
+                    <div                       
                         style={{
                             display: "flex",
                             flexDirection: "column",
                             gap: "20px",
-                            width: "400px"
+                            width: "320px"
                         }}
                     >
                         <input
@@ -67,16 +65,14 @@ export const SignIn = ({ handlerSigns }: sign) => {
                         {error !== '' &&
                             <p className="err-message">{error}</p>
                         }
-                        <Button
-                            variant="contained"
-                            size="large"
+                        <button
                             onClick={handleSubmit}
-                            style={{ backgroundColor: "#EEBC1D", color: "white" }}
+                            style={{ backgroundColor: "#EEBC1D", color: "white", width: '100%', height: "40px", fontWeight: '600', fontSize: "18px" }}
                         >
                             Sign In
-                        </Button>
+                        </button>
                         <p className="sign-change">Not account? <button onClick={handlerSigns}>Sign Up</button></p>
-                    </Box>
+                    </div>
                 </div>
             </section>
         </main>

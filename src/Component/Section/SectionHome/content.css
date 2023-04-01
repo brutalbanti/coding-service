@@ -59,7 +59,6 @@
 
 .timer-content__time {
     display: flex;
-    gap: 15px;
 }
 
 .time-content__item {
@@ -70,11 +69,10 @@
     font-weight: 800;
 }
 
-.time-content__item:not(:last-child)::before {
-    content: ":";
-    position: absolute;
-    left: 88px;
-    top: -5px;
+.time-content__span {
+    font-size: 65px;
+    z-index: 1;
+    color: white;
 }
 
 .timer-content__button {

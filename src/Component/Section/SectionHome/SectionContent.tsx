@@ -73,6 +73,7 @@ export const SectionContent = () => {
                         <div className="content-timer__content">
                             <div className="timer-content__time">
                                 <div className="time-content__item">{minutes}</div>
+                                <span className='time-content__span'>:</span>
                                 <div className="time-content__item">{seconds}</div>
                             </div>
                             <div className="timer-content__button">
